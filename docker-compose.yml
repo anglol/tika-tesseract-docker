@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    container_name: tika-tesseract
+    restart: always
+    build: .
+    ports:
+      - "9998:9998"
+    external_links:
+      - mongo
+    network_mode: "bridge"
